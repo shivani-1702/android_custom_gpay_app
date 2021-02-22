@@ -58,7 +58,7 @@ class PaymentOptions : Activity(), PaymentResultListener {
                     LayoutInflater.from(PaymentOptions().context).inflate(R.layout.fragment_method_netbanking_wallet_list, PaymentOptions().frameLayout, true)
                     PaymentOptions().listView = PaymentOptions().context.findViewById<View>(R.id.method_available_options_list) as ListView
                     PaymentOptions().listView?.adapter = PaymentOptions().banksListAdapter
-                    PaymentOptions().razorpay?.changeApiKey("rzp_live_ILgsfZCZoFIKMb")
+                    PaymentOptions().razorpay?.changeApiKey("rzp_live_wNe75AHP1XyKAl")
                     PaymentOptions().listView?.setOnItemClickListener { parent, view, position, id ->
                         run {
                             PaymentOptions().submitNetbankingDetails(PaymentOptions().bankCodesList[position])

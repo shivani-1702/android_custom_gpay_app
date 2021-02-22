@@ -22,7 +22,7 @@
 
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_live_ILgsfZCZoFIKMb" />
+            android:value="rzp_live_wNe75AHP1XyKAl" />
 
         <activity android:name=".java.PaymentOptions"></activity>
         <activity android:name=".kotlin.PaymentActivity">

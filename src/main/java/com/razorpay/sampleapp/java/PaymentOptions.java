@@ -67,7 +67,7 @@ public class PaymentOptions extends Activity implements PaymentResultListener {
                     LayoutInflater.from(PaymentOptions.this).inflate(R.layout.fragment_method_netbanking_wallet_list, frameLayout, true);
                     listView = (ListView) findViewById(R.id.method_available_options_list);
                     listView.setAdapter(banksListAdapter);
-                    razorpay.changeApiKey("rzp_live_ILgsfZCZoFIKMb");
+                    razorpay.changeApiKey("rzp_live_wNe75AHP1XyKAl");
                     listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                             submitNetbankingDetails(banksCodesList.get(position));
