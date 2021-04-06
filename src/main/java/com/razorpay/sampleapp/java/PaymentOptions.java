@@ -116,7 +116,16 @@ public class PaymentOptions extends Activity implements PaymentResultListener {
 
     private void initRazorpay() {
         razorpay = new Razorpay(this);
-
+        
+        razorpay.getAppsWhichSupportUpi(this, new RzpUpiSupportedAppsCallback() {
+            @Override
+            public void onReceiveUpiSupportedApps(List<ApplicationDetails> list) {
+                for (int i = 0; i < list.size(); i++) {
+                    System.out.println(list.get(i));
+                    Toast.makeText(PaymentOptions.this, "test list......"+ list.get(i).toString(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         razorpay.getPaymentMethods(new Razorpay.PaymentMethodsCallback() {
             @Override
             public void onPaymentMethodsReceived(String result) {
